@@ -1,18 +1,26 @@
 var chocolateBars = ["snickers", "hundred grand", "kitkat", "skittles"];
 
-function addElementToEndOfArray(A, b) {
-  A.push(b);
+function addElementToBeginningOfArray(A, b) {
+  A.unshift(b);
   return A;
 }
 
-
-function addElementToBeginningOfArray(array, element){
+function destructivelyAddElementToBeginningOfArray(array, element){
   var newArray = [...array];
   newArray.unshift(element);
   return newArray;
 }
 
-function destructivelyAddElementToBeginningOfArray(array, element){
-  array.unshift(element);
+function addElementToEndOfArray (array, element){
+  var freshArray = [...array];
+  freshArray.push(element);
+  return freshArray;
+}
+
+function destructivelyAddElementToEndOfArray(array, element){
+  array.push(element);
   return array;
 }
+
+
+
